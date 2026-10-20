@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
   }
- 
+  
   @font-face {
     font-family: 'Cortese Sans';
     src: url('fonts/CorteseSans-Regular.woff2') format('woff2'),
@@ -40,20 +40,24 @@
     margin: 0 auto;              
     gap: 24px;
     padding: 20px 20px 20px 28px;
-    background:#efeee9;
+    background: #efeee9;
     border-radius: 24px;
     --ctrl-radius: 10px;
     z-index: 9999;
     align-items: center;
     flex-wrap: wrap; 
     justify-content: flex-start;
-    --dash-font-size:16px;
-    --dash-tracking:0.05em; 
+    --dash-font-size: 16px;
+    --dash-tracking: 0.05em; 
+    outline: none;
   }
   
-  .type-tester-box:focus-within .tester-dashboard {
-    opacity: 1;
-    visibility: visible;          
+  /* Multi-browser focus lock stack for Safari and Chrome compatibility */
+  .type-tester-box:focus-within .tester-dashboard,
+  .tester-dashboard:focus-within,
+  .tester-dashboard:focus {
+    opacity: 1 !important;
+    visibility: visible !important;
   }
   
   .ctrl-grp {
@@ -83,6 +87,7 @@
     letter-spacing: var(--dash-tracking);
     color: #000000;
     white-space: nowrap;
+    user-select: none;
   }
   
   .select-wrap {
@@ -106,6 +111,7 @@
     box-sizing: border-box;
     appearance: none;               
     -webkit-appearance: none;       
+    user-select: none;
   }
   
   .tester-select:hover {
@@ -138,7 +144,6 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
   }
   
   .toggle-btn:hover {
@@ -158,6 +163,7 @@
     border-radius: var(--ctrl-radius);
     outline: none;
     cursor: pointer;
+    user-select: none;
   }
   
   .tester-slider::-webkit-slider-thumb {
@@ -186,7 +192,7 @@
     white-space: pre-wrap;    
     word-break: break-word;   
     font-family: serif;  
-    padding: 1vw;             
+    padding:1vw;             
     overflow: visible;        
     background: transparent;  
     color: #000000;           
@@ -197,8 +203,8 @@
   
   @media (max-width: 900px) {
     .tester-dashboard {
-      width:fit-content;
-        flex-direction: column;
+      width: fit-content;
+      flex-direction: column;
       align-items: flex-start;
       gap: 16px;
     }
@@ -206,7 +212,7 @@
     .ctrl-grp {
       width: 100%;
       justify-content: flex-start;
-      gap:16px; 
+      gap: 16px; 
       margin-right: 0 !important;
     }
   
@@ -221,5 +227,9 @@
       font-size: calc(12px + (var(--size) * 2.5vw));
       padding: 30px 30px 300px 30px; 
     }
+  }
+  
+  .whitespace {
+    height: 5000px;
   }
   
