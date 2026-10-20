@@ -20,7 +20,7 @@
   
   .type-tester-box {
     width: 100%;
-    background: transparent; 
+    background: red; 
     margin: 0;
     padding: 0;
   }
@@ -189,7 +189,7 @@
     padding: 1vw;             
     overflow: visible;        
     background: transparent;  
-    color: red;           
+    color: #000000;           
     text-align: left;
     text-transform: none;
     font-size: calc(var(--size) * 1vw);
