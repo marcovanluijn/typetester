@@ -20,7 +20,7 @@
   
   .type-tester-box {
     width: 100%;
-    background: red; 
+    background: transparent; 
     margin: 0;
     padding: 0;
   }
