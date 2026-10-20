@@ -189,7 +189,7 @@
     padding: 1vw;             
     overflow: visible;        
     background: transparent;  
-    color: #red;           
+    color: red;           
     text-align: left;
     text-transform: none;
     font-size: calc(var(--size) * 1vw);
