@@ -186,10 +186,10 @@
     white-space: pre-wrap;    
     word-break: break-word;   
     font-family: serif;  
-    padding: 50px 50px 180px 50px;             
+    padding: 1vw;             
     overflow: visible;        
     background: transparent;  
-    color: #000000;           
+    color: #red;           
     text-align: left;
     text-transform: none;
     font-size: calc(var(--size) * 1vw);
